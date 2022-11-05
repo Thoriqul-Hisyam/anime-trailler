@@ -1,8 +1,8 @@
-import {useEffect} from "react";
-import axios from 'axios';
+import React from 'react';
 import './App.css';
 import Navbar from './Component/NavbarComponent'
 import Discover from "./Component/DiscoverPage";
+
 function App() {
   
   return (
