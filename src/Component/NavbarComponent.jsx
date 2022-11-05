@@ -8,8 +8,8 @@ function Navbar(){
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <a href="javascript:void(0)">
-                            <a href="">
+                        <a href="../App.js">
+                            <a href="../App.js">
                                 <h2 className="text-lg font-bold text-white">SANIME</h2>
                             </a>
                         </a>
@@ -32,7 +32,7 @@ function Navbar(){
                                         />
                                     </svg>
                                 ) : (
-                                    <img src="/asset/burger.png" className='w-6'/>
+                                    <img src="/asset/burger.png" className='w-6' alt="burger"/>
                                 )}
                             </button>
                         </div>
@@ -46,13 +46,13 @@ function Navbar(){
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-white hover:text-red-800">
-                                <a href="javascript:void(0)">Home</a>
+                                <a href="../App.js">Home</a>
                             </li>
                             <li className="text-white hover:text-red-800">
-                                <a href="javascript:void(0)">TV</a>
+                                <a href="../App.js">TV</a>
                             </li>
                             <li className="text-white hover:text-red-800">
-                                <a href="javascript:void(0)">Movie</a>
+                                <a href="../App.js">Movie</a>
                             </li>
                         </ul>
                     </div>
