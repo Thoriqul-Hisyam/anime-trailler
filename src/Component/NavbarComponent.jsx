@@ -4,12 +4,14 @@ function Navbar(){
     const [navbar, setNavbar] = useState(false);
 
     return (
-        <nav className="w-full bg-transparent shadow">
+        <nav className="w-full bg-transparent ">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-lg font-bold text-white">Home</h2>
+                            <a href="">
+                                <h2 className="text-lg font-bold text-white">SANIME</h2>
+                            </a>
                         </a>
                         <div className="md:hidden">
                             <button
@@ -43,17 +45,14 @@ function Navbar(){
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-gray-600 hover:text-blue-600">
+                            <li className="text-white hover:text-red-800">
                                 <a href="javascript:void(0)">Home</a>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
-                                <a href="javascript:void(0)">Blog</a>
+                            <li className="text-white hover:text-red-800">
+                                <a href="javascript:void(0)">TV</a>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
-                                <a href="javascript:void(0)">About US</a>
-                            </li>
-                            <li className="text-gray-600 hover:text-blue-600">
-                                <a href="javascript:void(0)">Contact US</a>
+                            <li className="text-white hover:text-red-800">
+                                <a href="javascript:void(0)">Movie</a>
                             </li>
                         </ul>
                     </div>
