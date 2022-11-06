@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react';
 import Slider from 'react-slick';
-import axios from 'axios';
+// import axios from 'axios';
 import '../App.css';
 
 
@@ -15,14 +15,21 @@ function App() {
   const [carousel, setCarousel] = useState([]);
 
   useEffect(() =>{
-    const getCarousel = async () => {
-        await axios.get(`https://api.jikan.moe/v4/anime/`).then(function(response){
-            const carousels = response.data
-            // console.log(Carousels)
-            setCarousel(carousels.data)
-            // console.log(images)
+    // const getCarousel = async () => {
+    //     await axios.get(`https://api.jikan.moe/v4/anime/`).then(function(response){
+            
+    //         const carousels = response.data
+    //         // console.log(Carousels)
+    //         setCarousel(carousels.data)
+    //         // console.log(images)
            
-        })
+    //     })
+    // }
+    const getCarousel =  async() =>{
+      const anime = await fetch('https://api.jikan.moe/v4/anime')
+      const value = await anime.json()
+      console.log(value)
+      setCarousel(value.data)
     }
     getCarousel()
 },[])

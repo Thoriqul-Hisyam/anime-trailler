@@ -1,21 +1,28 @@
 import React,{useEffect,useState} from "react";
-import axios from 'axios';
+// import axios from 'axios';
 import Slider from './SliderComponent'
 import '../App.css';
 function Discover ({animes}) {
-    const [images, setImage] = useState([])
+    const [images, setAnime] = useState([])
 
     useEffect(() =>{
-        const getImageAnime = async () => {
-            await axios.get(`https://api.jikan.moe/v4/anime/`).then(function(response){
-                const imageAnimes = response.data
-                // console.log(imageAnimes)
-                setImage(imageAnimes.data)
-                // console.log(images)
-               
-            })
-        }
-        getImageAnime()
+        // const getImageAnime = async () => {
+        //       await axios.get(`https://api.jikan.moe/v4/anime/`).then(function(response){
+        //         console.log(response.data)
+        //         const imageAnimes = response.data
+        //         console.log(imageAnimes.data)
+        //         // console.log(images)
+                
+        //         setImage(imageAnimes.data)
+        //     })
+        // }
+        const getAnime =  async() =>{
+            const anime = await fetch('https://api.jikan.moe/v4/anime')
+            const value = await anime.json()
+            console.log(value)
+            setAnime(value.data)
+          }
+        getAnime()
     },[])
    
     return(
